@@ -24,3 +24,29 @@ else
     puts "You lost"
 end
 
+class Book
+    attr_accessor :author, :title, :price, :sales
+
+    def initialize (author, title, price, sales)
+        @author= author
+        @title = title
+        @price = price
+        @sales = sales
+    end
+
+    def to_s
+        "Title: #{title} Sold #{sales} copies for #{price} each"
+    end
+
+    def profits
+        profits = price*sales
+        puts "Profits #{profits}"
+        return profits
+    end
+end
+
+book1 = Book.new("Harry Potter", "J.K. Rowling", 400, 543)
+puts book1
+book1.profits
+
+
